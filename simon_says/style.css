@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(183, 238, 238);
+}
+.button--red {
+    grid-area: red;
+    background:red;
+}
+.button--blue {
+    grid-area: blue;
+    background:blue;
+}
+.button--green {
+    grid-area: green;
+    background:green;
+}
+.button--yellow {
+    grid-area: yellow;
+    background:yellow;
+}
+.button {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    transition: all .3s;
+
+}
+.board-wrapper {
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    /* grid-template-rows:repeat(3, 1fr);
+    grid-template-columns:repeat(3, 1fr); */
+    grid-template-areas:
+    ' .    red  . '
+    ' green . blue '
+    ' .  yellow  . '
+}
+.active {
+    border: 2px solid black;
+    box-shadow: 0 0 20px 20px rgb(140, 0, 255);
+    transform: scale(1.2);
+}
